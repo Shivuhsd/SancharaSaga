@@ -6,7 +6,7 @@ class SerializedBooking(serializers.ModelSerializer):
     class Meta:
         model = BookingUser
         fields = [
-            'name',
+            # 'name',
             'date',
             'email',
             'peoples',

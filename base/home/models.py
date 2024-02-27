@@ -5,8 +5,8 @@ import uuid
 
 class BookingUser(models.Model):
     # id = models.UUIDField(primarykey = True, editable = False, default = uuid.uuid4)
-    name = models.CharField(max_length = 100, blank = False)
-    date = models.CharField(max_length = 10, blank = False, default = "")
+    # name = models.CharField(max_length = 100, blank = False)
+    date = models.CharField(max_length = 40, blank = False, default = "")
     email = models.EmailField(blank = False)
     peoples = models.TextField(blank = False)
     whats_app_num = models.CharField(max_length = 12)
@@ -14,7 +14,7 @@ class BookingUser(models.Model):
     time_stamp = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
-        return self.name
+        return self.email
     
 
 class Feedback(models.Model):
